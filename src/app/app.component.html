@@ -1,4 +1,20 @@
 <div class="container">
   <h1 class="mt-3 mb-3">Hinded</h1>
-  <app-grades-list></app-grades-list>
+  <div class="row">
+    <div class="column">
+      <div class="form-area">
+        <form #gradesForm="ngForm" (ngSubmit)="onGradeCreate(gradesForm.value)">
+          <label>Maksimum punktid:</label><br>
+          <input type="text" name = "maximum" placeholder="39" ngModel><br>
+          <label>Õpilase punktid:</label><br>
+          <input type="text" name="points" placeholder="14" ngModel><br><br>
+          <input type="submit" value="Sisesta punktid">
+        </form>
+      </div>
+    </div>
+    <div class="column">
+      <app-grades-list></app-grades-list>
+    </div>
+  </div>
+
 </div>

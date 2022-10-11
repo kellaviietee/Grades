@@ -8,12 +8,12 @@ import { GradeService } from 'src/app/services/grade.service';
   styleUrls: ['./grades-list.component.css']
 })
 export class GradesListComponent implements OnInit {
-
   grades:Grade[] = [];
-  constructor(private gradeService:GradeService) { }
+  constructor(private gradeService:GradeService) {
+  }
 
   ngOnInit(): void {
-    this.listGrades();
+    this.gradeService.currentGrades.subscribe(grades => this.grades = grades)
   }
   listGrades() {
     this.gradeService.getGradeList().subscribe(
