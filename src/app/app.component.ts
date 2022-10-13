@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Stats } from './common/stats';
 import { GradeService } from './services/grade.service';
 
@@ -17,7 +18,7 @@ export class AppComponent {
     this.clearAll();
   }
 
-  onGradeCreate(grade: {points:string, maximum:string}){
+  onGradeCreate(grade: {points:string, maximum:string}, form:NgForm){
     if(!grade.points || !grade.maximum) {
       alert("Punktid või maksimum määramata!");
     } else if(grade.points.includes(",") || grade.maximum.includes(",")) {
@@ -28,6 +29,7 @@ export class AppComponent {
         (data)=>{console.log(data);
       }
       )
+      form.form.get("points")?.reset();
       this.gradeService.getGradeList();
       this.gradeService.getGradeList();
     }

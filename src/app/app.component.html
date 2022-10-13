@@ -3,7 +3,7 @@
   <div class="row">
     <div class="column">
       <div class="form-area">
-        <form #gradesForm="ngForm" (ngSubmit)="onGradeCreate(gradesForm.value)">
+        <form #gradesForm="ngForm" (ngSubmit)="onGradeCreate(gradesForm.value, gradesForm)">
           <label>Maksimum punktid:</label><br>
           <input type="text" name = "maximum" placeholder="39" ngModel><br>
           <label>Õpilase punktid:</label><br>
