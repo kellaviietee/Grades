@@ -14,6 +14,7 @@ export class GradesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.gradeService.currentGrades.subscribe(grades => this.grades = grades)
+    this.listGrades();
   }
   listGrades() {
     this.gradeService.getGradeList().subscribe(

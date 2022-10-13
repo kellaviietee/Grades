@@ -1,1 +1,14 @@
-<p *ngFor="let grade of grades"> Õpilane nr {{grade.id}} sai {{grade.points}} punkti {{grade.maximum}}st = {{grade.percentage}}% ehk hinne: {{grade.grade}}</p>
+<table class="styled-table">
+    <tr>
+      <th>Nr</th>
+      <th>Punktid</th>
+      <th>Protsent</th>
+      <th>Hinne</th>
+    </tr>
+    <tr *ngFor="let grade of grades">
+      <td >{{grades.length - grades.indexOf(grade)}}</td>
+      <td >{{grade.points}}</td>
+      <td >{{grade.percentage}}%</td>
+      <td >{{grade.grade}}</td>
+    </tr>
+  </table>

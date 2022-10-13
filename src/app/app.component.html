@@ -10,10 +10,73 @@
           <input type="text" name="points" placeholder="14" ngModel><br><br>
           <input type="submit" value="Sisesta punktid">
         </form>
+        <br>
+        <button (click)="getStats()">Statistika</button>
+        <br>
+        <br>
+        <button (click)="clearAll()">Kustuta andmed</button>
       </div>
     </div>
     <div class="column">
       <app-grades-list></app-grades-list>
+    </div>
+    <div class="column">
+      <table class="styled-table">
+        <th>Hinne</th>
+        <th>Õpilaste arv</th>
+        <tr>
+          <th>5+ </th>
+          <td>{{stats.above100}}</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td >{{stats.above95}}</td>
+        </tr>
+        <tr>
+          <th>5-</th>
+          <td >{{stats.above90}}</td>
+        </tr>
+        <tr>
+          <th>4+</th>
+          <td >{{stats.above85}}</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td >{{stats.above80}}</td>
+        </tr>
+        <tr>
+          <th>4-</th>
+          <td >{{stats.above75}}</td>
+        </tr>
+        <tr>
+          <th>3+</th>
+          <td >{{stats.above70}}</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td >{{stats.above60}}</td>
+        </tr>
+        <tr>
+          <th>3-</th>
+          <td >{{stats.above50}}</td>
+        </tr>
+        <tr>
+          <th>2+</th>
+          <td >{{stats.above40}}</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td >{{stats.above30}}</td>
+        </tr>
+        <tr>
+          <th>2-</th>
+          <td >{{stats.above20}}</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td >{{stats.above00}}</td>
+        </tr>
+      </table>
     </div>
   </div>
 
