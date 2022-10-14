@@ -1714,10 +1714,10 @@ section {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
-.styled-table thead tr {
+.styled-table thead th {
   background-color: #009879;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
 }
 .styled-table th,
 .styled-table td {

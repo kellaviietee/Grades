@@ -1,14 +1,18 @@
 <table class="styled-table">
+  <thead>
     <tr>
       <th>Nr</th>
       <th>Punktid</th>
       <th>Protsent</th>
       <th>Hinne</th>
     </tr>
+  </thead>
+  <tbody>
     <tr *ngFor="let grade of grades">
       <td >{{grades.length - grades.indexOf(grade)}}</td>
       <td >{{grade.points}}</td>
       <td >{{grade.percentage}}%</td>
       <td >{{grade.grade}}</td>
     </tr>
+  </tbody>
   </table>
