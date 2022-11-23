@@ -11,7 +11,7 @@ import { GradeService } from './services/grade.service';
 })
 export class AppComponent {
   title = 'Grades';
-  private URL:string = "https://hinded.herokuapp.com/add";
+  private URL:string = "https://hinded-backend-production.up.railway.app/add";
   stats:Stats = new Stats(0,0,0,0,0,0,0,0,0,0,0,0,0);
   constructor(private http: HttpClient, private gradeService: GradeService){}
   ngOnInit(): void {

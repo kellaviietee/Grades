@@ -11,9 +11,9 @@ export class GradeService {
 
   public gradesSource = new BehaviorSubject<Grade[]>([]);
   currentGrades = this.gradesSource.asObservable();
-  private URL:string = "https://hinded.herokuapp.com/all";
-  private statsURL:string = "https://hinded.herokuapp.com/stats";
-  private clearURL:string = "https://hinded.herokuapp.com/clear";
+  private URL:string = "https://hinded-backend-production.up.railway.app/all";
+  private statsURL:string = "https://hinded-backend-production.up.railway.app/stats";
+  private clearURL:string = "https://hinded-backend-production.up.railway.app/clear";
   constructor(private httpClient:HttpClient) { }
 
   getGradeList(){
