@@ -5,9 +5,9 @@
       <div class="form-area">
         <form #gradesForm="ngForm" (ngSubmit)="onGradeCreate(gradesForm.value, gradesForm)">
           <label>Maksimum punktid:</label><br>
-          <input type="text" name = "maximum" placeholder="39" ngModel><br>
+          <input type="text" name = "maximum" ngModel><br>
           <label>Õpilase punktid:</label><br>
-          <input type="text" name="points" placeholder="14" ngModel><br><br>
+          <input type="text" name="points" ngModel><br><br>
           <input type="submit" value="Sisesta punktid">
         </form>
         <br>
